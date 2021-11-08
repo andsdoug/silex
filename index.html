@@ -65,60 +65,55 @@
 
 <section data-silex-type="container-element" class="container-element editable-style silex-id-1541607542031-10 section-element prevent-resizable"><div data-silex-type="container-element" class="editable-style silex-id-1541607542028-9 container-element silex-element-content website-width hero" style=""><div data-silex-type="image-element" class="editable-style image-element silex-id-1432759239575-24" style="">
             <img class="" src="assets/avatar.jpg">
-        </div><div data-silex-type="html-element" class="editable-style html-element silex-id-1636208314982-1 page-home paged-element silex-component-form centered-text paged-element-visible" style=""><div class="silex-element-content">
-
-
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        </div><div data-silex-type="html-element" class="editable-style html-element silex-id-1636208314982-1 page-home paged-element silex-component-form centered-text paged-element-visible" style=""><div class="silex-element-content"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Alerta Ações BOT</title>
 
 
+<img id="top" src="assets/top.png" alt="">
+<div id="form_container">
 
+    <form id="boti-form" class="appnitro" method="post" action="https://api.boti.com.br/api/v1/cadastrar_cotacao">
+        <div class="form_description">
+            <p>Insira aqui seus alertas que deseja receber.</p>
+        </div>
+        <div class="g-recaptcha" data-sitekey="6LcuaxsdAAAAAMFJRuTm1GIRIm81LdrbbMnr9I9_"></div>
+        <ul>
 
-	
-	<img id="top" src="assets/top.png" alt="">
-	<div id="form_container">
+            <li id="li_1">
+                <label class="description" for="email">Email </label>
+                <div>
+                    <input id="email" name="email" class="element text medium" type="text" maxlength="30" required="">
+                </div>
+            </li>
+            <li id="li_2">
+                <label class="description" for="codigo_acao">Nome da Ação </label>
+                <div>
+                    <input id="codigo_acao" name="codigo_acao" class="element text medium" type="text" maxlength="10" required="">
+                </div>
+            </li>
+            <li id="li_3">
+                <label class="description" for="maximo_1">Alerta de Maxima </label>
+                <div>
+                    <input id="maximo_1" name="maximo_1" class="element text medium" type="number" maxlength="6" min="0" max="99999" step="0.01" required="">
+                </div>
+            </li>
+            <li id="li_4">
+                <label class="description" for="minimo_1">Alerta de Minima </label>
+                <div>
+                    <input id="minimo_1" name="minimo_1" class="element text medium" type="number" maxlength="6" min="0" max="99999" step="0.01" required="">
+                </div>
+            </li>
 
-		<form id="boti-form" class="appnitro" method="post" action="https://api.boti.com.br/api/v1/cadastrar_cotacao">
-					<div class="form_description">
-			<p>Insira aqui seus alertas que deseja receber.</p>
-		</div>						
-			<ul>
-			
-					<li id="li_1">
-		<label class="description" for="email">Email </label>
-		<div>
-			<input id="email" name="email" class="element text medium" type="text" maxlength="30" required=""> 
-		</div> 
-		</li>		<li id="li_2">
-		<label class="description" for="codigo_acao">Nome da Ação </label>
-		<div>
-			<input id="codigo_acao" name="codigo_acao" class="element text medium" type="text" maxlength="10" required=""> 
-		</div> 
-		</li>		<li id="li_3">
-		<label class="description" for="maximo_1">Alerta de Maxima </label>
-		<div>
-			<input id="maximo_1" name="maximo_1" class="element text medium" type="number" maxlength="6" min="0" max="99999" step="0.01" required=""> 
-		</div> 
-		</li>		<li id="li_4">
-		<label class="description" for="minimo_1">Alerta de Minima </label>
-		<div>
-			<input id="minimo_1" name="minimo_1" class="element text medium" type="number" maxlength="6" min="0" max="99999" step="0.01" required=""> 
-		</div> 
-		</li>
-			
-					<li class="buttons">
-			    <input type="hidden" name="form_id" value="33669">
-			    
-				<input id="saveForm" class="button_text" type="submit" name="submit" value="Submit">
-                <div class="g-recaptcha" data-sitekey="6LcuaxsdAAAAAMFJRuTm1GIRIm81LdrbbMnr9I9_"></div>
-      <br>
-		</li>
-			</ul>
-		</form>	
+            <li class="buttons">
+                <input type="hidden" name="form_id" value="33669">
 
-	</div>
-	
-</div></div></div></section><section data-silex-type="container-element" class="container-element editable-style silex-id-1541607078776-1 section-element prevent-resizable" style=""><div data-silex-type="container-element" class="editable-style silex-id-1541607078769-0 container-element silex-element-content website-width" style=""><div data-silex-type="text-element" class="editable-style text-element silex-id-1432759239473-23 text-style-2 centered-text" style="" href="null">
+                <input id="saveForm" class="button_text" type="submit" name="submit" value="Submit">
+                <br>
+            </li>
+        </ul>
+    </form>
+
+</div></div></div></div></section><section data-silex-type="container-element" class="container-element editable-style silex-id-1541607078776-1 section-element prevent-resizable" style=""><div data-silex-type="container-element" class="editable-style silex-id-1541607078769-0 container-element silex-element-content website-width" style=""><div data-silex-type="text-element" class="editable-style text-element silex-id-1432759239473-23 text-style-2 centered-text" style="" href="null">
             <div class="silex-element-content normal">
                 <p>boti.com.br</p>
             </div>
