@@ -28,7 +28,9 @@
 
 
     
-<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" class="silex-custom-font"><meta name="viewport" content="width=device-width, initial-scale=1"><meta content="summary_large_image" name="twitter:card"><meta property="og:type" content="website"><meta property="twitter:title" content="cotacoes bovespa"><meta property="og:title" content="cotacoes bovespa"><script src="js/script.js" type="text/javascript"></script><link href="css/styles.css" rel="stylesheet" type="text/css"><link rel="stylesheet" href="fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" class="silex-custom-font"><meta name="viewport" content="width=device-width, initial-scale=1"><meta content="summary_large_image" name="twitter:card"><meta property="og:type" content="website"><meta property="twitter:title" content="cotacoes bovespa"><meta property="og:title" content="cotacoes bovespa"><script src="js/script.js" type="text/javascript"></script><link href="css/styles.css" rel="stylesheet" type="text/css"><link rel="stylesheet" type="text/css" href="styles.css" media="screen">
+<script type="text/javascript" src="front-end.js"></script>
+
 <script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
      <script src="https://www.google.com/recaptcha/api.js" async="" defer=""></script>
      <script>
@@ -67,19 +69,16 @@
 
 
 
-<section data-silex-type="container-element" class="container-element editable-style silex-id-1541607542031-10 section-element prevent-resizable"><div data-silex-type="container-element" class="editable-style silex-id-1541607542028-9 container-element silex-element-content website-width hero" style=""><div data-silex-type="image-element" class="editable-style image-element silex-id-1432759239575-24" style="">
-            <img class="" src="assets/avatar.jpg">
-        </div><div data-silex-type="html-element" class="editable-style html-element silex-id-1636208314982-1 page-home paged-element silex-component-form centered-text paged-element-visible" style=""><div class="silex-element-content"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<section data-silex-type="container-element" class="container-element editable-style silex-id-1541607542031-10 section-element prevent-resizable"><div data-silex-type="container-element" class="editable-style silex-id-1541607542028-9 container-element silex-element-content website-width hero" style=""><div data-silex-type="image-element" class="editable-style image-element silex-id-1432759239575-24 silex-component-form" style=""><img src="assets/boti_alerta_acoes.jpg"></div><div data-silex-type="html-element" class="editable-style silex-id-1636208314982-1 page-home paged-element paged-element-visible" style="" title="cadastro de alertas"><div class="silex-element-content"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Alerta Ações BOT</title>
 
 
-<img id="top" src="assets/top.png" alt="">
 <div id="form_container">
 
     <form id="boti-form" class="appnitro" method="post" action="https://api.boti.com.br/api/v1/cadastrar_cotacao">
 
         <div class="form_description">
-            <p>Insira aqui seus alertas que deseja receber.</p>
+          <h3><p style="text-align:center">Insira aqui seus alertas que deseja receber.</p></h3>
         </div>
 
         <br>
@@ -109,12 +108,10 @@
                     <input id="minimo_1" name="minimo_1" class="element text medium" type="number" maxlength="6" min="0" max="99999" step="0.01" required="">
                 </div>
             </li>
-
-            <li class="buttons">
-                <input type="hidden" name="form_id" value="33669">
+            <br>
                 <button class="g-recaptcha" data-sitekey="6LfxZxsdAAAAAIpzA2N_FcjmbhpaHi5r3kjaVu7M" data-callback="onSubmit">Submit</button>
                 <br>
-            </li>
+
         </ul>
     </form>
 </div>
