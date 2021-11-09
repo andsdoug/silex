@@ -18,4 +18,3 @@
         	// create the fancybox
         	$('.fancybox').fancybox();
         });
-    
