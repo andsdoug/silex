@@ -1,28 +1,25 @@
 
 
     window.silex = window.silex || {}
-    window.silex.data = {"site":{"width":972},"pages":[{"id":"page-home","displayName":"Home","link":{"linkType":"LinkTypePage","href":"#!page-home"},"canDelete":true,"canProperties":true,"canMove":true,"canRename":true,"opened":false}]}
+    window.silex.data = {"site":{"width":1000},"pages":[{"id":"page-home-page","displayName":"Home Page","link":{"linkType":"LinkTypePage","href":"#!page-home-page"},"canDelete":true,"canProperties":true,"canMove":true,"canRename":true,"opened":false},{"id":"page-product-details","displayName":"Product Details","link":{"linkType":"LinkTypePage","href":"#!page-product-details"},"canDelete":true,"canProperties":true,"canMove":true,"canRename":true,"opened":false},{"id":"page-cadastro-de-alerta","displayName":"cadastro-de-alerta","link":{"linkType":"LinkTypePage","href":"#!page-cadastro-de-alerta"},"canDelete":true,"canProperties":true,"canMove":true,"canRename":true,"opened":false},{"id":"page-seu-alerta-foi-cadastrado","displayName":"seu-alerta-foi-cadastrado","link":{"linkType":"LinkTypePage","href":"#!page-seu-alerta-foi-cadastrado"},"canDelete":true,"canRename":true,"canMove":true,"canProperties":true,"opened":false}]}
 
-/*
- * active menu widget for Silex
- * create an element which links to an anchor, e.g. an element with a link to #anchor1
- * add the css class "anchor-link" to this element
- * create an element which is the anchor, e.g. an element with the css class "anchor1"
- * when the user clicks on the link, the scroll slides until the element is visible
- * when the user slides and the element is visible, the link gets a css class "active-menu"
- */
-$(function() {
-    var container = $('.anchor-container');
-    var containerTop = 0;
-    $(window).scroll(checkScroll);
-    checkScroll();
-    function checkScroll(){
-        var fromTop = $(this).scrollTop();
-        if(containerTop < fromTop) {
-           container.addClass('offscreen');
-        }
-        else {
-           container.removeClass('offscreen');
-        }
-    }
-});
+        $(function() {
+            /* hamburger menu */
+            $('.close-btn, .open-btn').click(function() {
+                $('body').toggleClass('is-not-active is-active');
+            });
+
+            /*
+                animation widget from here: https://github.com/silexlabs/Silex/issues/443
+            */
+
+            window.sr = ScrollReveal({
+                distance: '100px'
+            });
+            sr.reveal('.from-left', { origin:  'left'});
+            sr.reveal('.from-right', { origin:  'right'});
+            sr.reveal('.from-top', { origin:  'top'});
+            sr.reveal('.from-bottom', { origin:  'bottom'});
+
+        })
+    
