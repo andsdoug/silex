@@ -1,25 +1,20 @@
 
 
     window.silex = window.silex || {}
-    window.silex.data = {"site":{"width":1000},"pages":[{"id":"page-home-page","displayName":"Home Page","link":{"linkType":"LinkTypePage","href":"#!page-home-page"},"canDelete":true,"canProperties":true,"canMove":true,"canRename":true,"opened":false},{"id":"page-product-details","displayName":"Product Details","link":{"linkType":"LinkTypePage","href":"#!page-product-details"},"canDelete":true,"canProperties":true,"canMove":true,"canRename":true,"opened":false},{"id":"page-cadastro-de-alerta","displayName":"cadastro-de-alerta","link":{"linkType":"LinkTypePage","href":"#!page-cadastro-de-alerta"},"canDelete":true,"canProperties":true,"canMove":true,"canRename":true,"opened":false},{"id":"page-seu-alerta-foi-cadastrado","displayName":"seu-alerta-foi-cadastrado","link":{"linkType":"LinkTypePage","href":"#!page-seu-alerta-foi-cadastrado"},"canDelete":true,"canRename":true,"canMove":true,"canProperties":true,"opened":false}]}
-
-        $(function() {
-            /* hamburger menu */
-            $('.close-btn, .open-btn').click(function() {
-                $('body').toggleClass('is-not-active is-active');
-            });
-
-            /*
-                animation widget from here: https://github.com/silexlabs/Silex/issues/443
-            */
-
-            window.sr = ScrollReveal({
-                distance: '100px'
-            });
-            sr.reveal('.from-left', { origin:  'left'});
-            sr.reveal('.from-right', { origin:  'right'});
-            sr.reveal('.from-top', { origin:  'top'});
-            sr.reveal('.from-bottom', { origin:  'bottom'});
-
-        })
-    
+    window.silex.data = {"site":{"width":960},"pages":[{"id":"page-home","displayName":"Home","link":{"linkType":"LinkTypePage","href":"#!page-home"},"canDelete":true,"canProperties":true,"canMove":true,"canRename":true,"opened":false}]}
+        $(document).ready(function() {
+        	$('.fancybox').each(function () {
+        	    var href = this.getAttribute('data-silex-href') || this.getAttribute('href');
+        	    if (this.getAttribute('data-silex-href')) {
+            	    this.removeAttribute('data-silex-href');
+            	    // for the fancybox script
+            	    this.setAttribute('href', href);
+            	    // prevent silex from opening link
+            	    $(this).off('click');
+        	    }
+        	    // this is a galery
+        	    this.setAttribute('data-fancybox-group', 'group1');
+        	});
+        	// create the fancybox
+        	$('.fancybox').fancybox();
+        });
